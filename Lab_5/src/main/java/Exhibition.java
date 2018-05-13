@@ -4,12 +4,14 @@ public class Exhibition {
     private int date;
     private String subject;
     private double ticketPrice;
-    private List<Exhibit> exhibitList = new LinkedList<Exhibit>();
+    private List<Exhibit> exhibitList;
 
     public Exhibition(int date, String subject, double ticketPrice) {
         this.date = date;
         this.subject = subject;
         this.ticketPrice = ticketPrice;
+        this.exhibitList = new LinkedList<>();
+
     }
 
     public void addExhibit(Exhibit addExhibit) {
@@ -17,7 +19,7 @@ public class Exhibition {
     }
 
     public List<Exhibit> sortExhibitByAge() {
-        exhibitList.sort((Exhibit o1, Exhibit o2) -> o1.getAge() - o2.getAge());
+        exhibitList.sort((Exhibit o1, Exhibit o2) -> o1.getAge().getAge() - o2.getAge().getAge());
         return exhibitList;
     }
 
@@ -52,7 +54,7 @@ public class Exhibition {
     public List<Exhibit> findExhibitByAge(int age) {
         List<Exhibit> result = new LinkedList<>();
         for (Exhibit exhibit : exhibitList) {
-            if (exhibit.getAge() == age) {
+            if (exhibit.getAge().getAge() == age) {
                 result.add(exhibit);
             }
         }
@@ -62,4 +64,8 @@ public class Exhibition {
     public List<Exhibit> getExhibitList() {
         return exhibitList;
     }
+
+
+
+
 }

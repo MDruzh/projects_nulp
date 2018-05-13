@@ -1,5 +1,8 @@
-public abstract class Exhibit {
+import javax.annotation.processing.Generated;
 
+public class Exhibit {
+
+    private Integer id;
     private ExhibitName name;
     private ExhibitAge age;
     private String kindOfArt;
@@ -25,6 +28,24 @@ public abstract class Exhibit {
         this.age = age;
     }
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getHeaders() {
+        return "name" + "," + "age" + "," + "condition" + "," + "weight";
+    }
+
+    public String toCVS() {
+        return getName() + "," + getAge() + "," + getCondition() + "," + getWeight();
+    }
+
+
+
     public ExhibitName getName() {
         return name;
     }
@@ -33,16 +54,8 @@ public abstract class Exhibit {
         this.name = name;
     }
 
-    public int getAge() {
-        if (this.age == ExhibitAge.FIVEBC) {
-            return 5;
-        } else if (this.age == ExhibitAge.SIXBC) {
-            return 6;
-        } else if (this.age == ExhibitAge.SEVENBC) {
-            return 7;
-        } else {
-            return 8;
-        }
+    public ExhibitAge getAge() {
+        return age ;
     }
 
     public void setAge(ExhibitAge age) {

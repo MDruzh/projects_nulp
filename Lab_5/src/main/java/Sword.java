@@ -18,6 +18,14 @@ public class Sword extends Exhibit {
         this.swordLength = swordLength;
     }
 
+    public String getHeaders() {
+        return super.getHeaders() + "," + "swordLength";
+    }
+
+    public String toCVS() {
+        return super.toCVS() + "," + getSwordLength();
+    }
+
     @Override
     public String toString() {
         return super.toString() + ", sword length: " + this.swordLength + "\n";

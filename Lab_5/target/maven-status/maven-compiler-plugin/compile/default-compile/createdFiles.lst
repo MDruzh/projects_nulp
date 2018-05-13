@@ -2,8 +2,11 @@ Shield.class
 Clothes.class
 Exhibit.class
 Main.class
+ExhibitService.class
 Chronicle.class
 Exhibition.class
+Writer.class
 Sword.class
+rest/config/JaxRsConfig.class
 ExhibitAge.class
 ExhibitName.class

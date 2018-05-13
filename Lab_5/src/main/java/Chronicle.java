@@ -15,6 +15,14 @@ public class Chronicle extends Exhibit{
         this.numberOfPages = numberOfPages;
     }
 
+    public String getHeaders() {
+        return super.getHeaders() + "," + "numberOfPages";
+    }
+
+    public String toCVS() {
+        return super.toCVS() + "," + getNumberOfPages();
+    }
+
     @Override
     public String toString() {
         return super.toString() + ", number of pages: " + this.numberOfPages + "\n";

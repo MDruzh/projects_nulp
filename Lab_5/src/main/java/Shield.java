@@ -18,6 +18,14 @@ public class Shield extends Exhibit {
         this.shape = shape;
     }
 
+    public String getHeaders() {
+        return super.getHeaders() + "," + "shape";
+    }
+
+    public String toCVS() {
+        return super.toCVS() + "," + getShape();
+    }
+
     @Override
     public String toString() {
         return super.toString() + ", shape: " + this.shape + "\n";

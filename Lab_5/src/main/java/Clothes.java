@@ -18,6 +18,14 @@ public class Clothes extends Exhibit {
         this.material = material;
     }
 
+    public String getHeaders() {
+        return super.getHeaders() + "," + "material";
+    }
+
+    public String toCVS() {
+        return super.toCVS() + "," + getMaterial();
+    }
+
     @Override
     public String toString() {
         return super.toString() + ", material: " + this.material + "\n";
