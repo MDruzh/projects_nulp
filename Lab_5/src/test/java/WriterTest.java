@@ -1,9 +1,6 @@
-import org.junit.Assert;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-
-import java.util.LinkedList;
-import java.util.List;
+import ua.Lviv.iot.*;
+import ua.Lviv.iot.Exhibition;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
@@ -19,9 +16,9 @@ public class WriterTest {
         exhibition.addExhibit(
                 new Shield(ExhibitName.SHIELD, ExhibitAge.SIXBC, "Weapon", "Rome", "Average", 5.4, "Square"));
         exhibition.addExhibit(
-                new Clothes(ExhibitName.CLOTHES, ExhibitAge.FIVEBC, "Clothes", "Rome", "Average", 5.4, "Leather"));
+                new Clothes(ExhibitName.CLOTHES, ExhibitAge.FIVEBC, "ua.Lviv.iot.Clothes", "Rome", "Average", 5.4, "Leather"));
         exhibition.addExhibit(
-                new Chronicle(ExhibitName.CHRONICLE, ExhibitAge.EIGHTBC, "Chronicle", "Rome", "Average", 5.4, 234));
+                new Chronicle(ExhibitName.CHRONICLE, ExhibitAge.EIGHTBC, "ua.Lviv.iot.Chronicle", "Rome", "Average", 5.4, 234));
 
         try {
             writer.writeToFile(exhibition.getExhibitList());
