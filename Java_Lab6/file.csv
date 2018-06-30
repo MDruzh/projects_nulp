@@ -1,0 +1,8 @@
+name,age,condition,weight,swordLength
+SWORD,7,Average,5.4,1.2
+name,age,condition,weight,shape
+SHIELD,6,Average,5.4,Square
+name,age,condition,weight,material
+CLOTHES,5,Average,5.4,Leather
+name,age,condition,weight,numberOfPages
+CHRONICLE,8,Average,5.4,234
